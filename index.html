@@ -1,347 +1,392 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StudyNest | Desk Organization Ideas &amp; Workspace Guides</title>
+<meta name="google-site-verification" content="xSmHcAZP9_v4hY0rsyl-JKw9ra-mCqcZJObADqccC0w">
+<meta name="description" content="Discover desk organization ideas, compact storage solutions and practical guides to help organize small study tables and workspaces.">
+<meta name="theme-color" content="#f8f6f0">
+<link rel="canonical" href="https://reenadigitalwork-maker.github.io/studynest-website/">
+<style>
+:root{--bg:#f8f6f0;--card:#fffefa;--line:#e4e0d6;--ink:#222a25;--muted:#59625b;--green:#54765b;--forest:#294d36;--sage:#e9eee5;--beige:#efe8d8}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.7}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--green);outline-offset:3px}
+.wrap{width:min(1100px,92%);margin:auto}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.15;letter-spacing:-.015em}
+h1{font-size:clamp(42px,10vw,76px);margin:12px 0 20px}
+h2{font-size:clamp(28px,5.5vw,40px);margin-bottom:14px}
+h3{font-size:21px;margin-bottom:6px}
+p{margin-bottom:12px}
+section{padding:54px 0}
+.kicker{color:var(--green);font-weight:700;font-size:15px}
+.lead{max-width:60ch;font-size:17px}
+.muted{color:var(--muted)}
 
-  <title>StudyNest | Smart Study Space Ideas</title>
+/* header */
+header{position:sticky;top:0;z-index:10;background:rgba(248,246,240,.96);border-bottom:1px solid var(--line)}
+.nav{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;padding:12px 0}
+.logo{font-family:Georgia,serif;font-size:26px;font-weight:700;text-decoration:none}
+.logo span{color:var(--green)}
+nav{display:none;width:100%;flex-direction:column;padding:8px 0}
+nav.open{display:flex}
+nav a{text-decoration:none;font-weight:600;font-size:15px;padding:11px 0;border-top:1px solid var(--line)}
+nav a.active{color:var(--green)}
+.menu-btn{background:none;border:2px solid var(--green);color:var(--forest);border-radius:8px;padding:6px 14px;font-weight:700;cursor:pointer;font-size:14px}
 
-  <meta name="google-site-verification" content="xSmHcAZP9_v4hY0rsyl-JKw9ra-mCqcZJObADqccC0w" />
-  <meta name="description"
-    content="Discover practical study desk organization ideas, compact storage solutions and budget-friendly study accessories for students.">
+/* buttons */
+.btn{display:inline-block;padding:14px 24px;border-radius:8px;font-weight:700;text-decoration:none;font-size:15px;border:2px solid var(--forest);transition:background .2s}
+.btn-main{background:var(--forest);color:#fff}
+.btn-main:hover{background:#1d3826}
+.btn-alt{color:var(--forest)}
+.btn-alt:hover{background:var(--sage)}
+.btn-light{background:#f8f6f0;color:var(--forest);border-color:#f8f6f0}
+.btn-light:hover{background:#fff}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
 
-  <meta name="theme-color" content="#f8f6f0">
+/* hero */
+.hero{display:grid;gap:30px;padding:36px 0 48px;align-items:center}
+.hero figure{background:var(--sage);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.hero svg{display:block;width:100%;height:auto}
+.hero figcaption{font-size:12px;color:var(--muted);padding:8px 14px}
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+/* problems: open strip, not cards */
+.problems{border-top:1px solid var(--line);margin-top:26px}
+.problem{padding:22px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:54px 1fr;gap:16px}
+.problem svg{width:54px;height:54px}
+.problem p{margin:0}
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #f8f6f0;
-      color: #222a25;
-      line-height: 1.6;
-    }
+/* categories */
+.cats{display:grid;gap:18px;margin-top:26px}
+.cat{background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden;display:flex;flex-direction:column;text-decoration:none;transition:border-color .2s,transform .2s}
+.cat:hover{border-color:var(--green);transform:translateY(-3px)}
+.cat .art{height:130px;display:grid;place-items:center}
+.cat .art svg{width:84px;height:84px}
+.cat .body{padding:18px 20px 22px;display:flex;flex-direction:column;flex:1}
+.cat .body p{font-size:15px;color:var(--muted)}
+.cat .go{margin-top:auto;font-weight:700;color:var(--green);font-size:15px}
+.a1{background:#dfe8da}.a2{background:var(--beige)}.a3{background:#e3e9e0}.a4{background:#ebe3cf}
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+/* ideas */
+.ideas-sec{background:var(--sage)}
+.ideas-grid{display:grid;gap:28px}
+.tips{list-style:none;counter-reset:t}
+.tips li{counter-increment:t;padding:20px 0 20px 56px;border-bottom:1px solid #c9d2c4;position:relative}
+.tips li:first-child{border-top:1px solid #c9d2c4}
+.tips li::before{content:counter(t);position:absolute;left:0;top:18px;width:38px;height:38px;border-radius:50%;background:var(--forest);color:#fff;display:grid;place-items:center;font-family:Georgia,serif;font-size:19px}
+.tips p{margin:0}
 
-    .container {
-      width: min(1100px, 90%);
-      margin: auto;
-    }
+/* buy thoughtfully */
+.buy{background:var(--forest);color:#f3f1e8}
+.buy .kicker{color:#b9d1bd}
+.rules{display:grid;gap:0;margin:26px 0}
+.rule{padding:18px 0;border-top:1px solid rgba(255,255,255,.25)}
+.rule strong{font-family:Georgia,serif;font-size:21px;display:block}
+.rule span{opacity:.88}
 
-    header {
-      padding: 20px 0;
-      border-bottom: 1px solid #e4e0d6;
-    }
+/* help */
+.help{background:var(--beige)}
+.help-grid{display:grid;gap:26px}
+.help ul{list-style:none}
+.help li{padding:14px 0 14px 30px;border-bottom:1px solid #d9cfb8;position:relative}
+.help li::before{content:"";position:absolute;left:2px;top:23px;width:12px;height:12px;border-radius:50%;background:var(--green)}
 
-    .nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
+/* closing */
+.closing{text-align:center}
+.closing p{max-width:56ch;margin:0 auto 22px}
 
-    .logo {
-      font-size: 25px;
-      font-weight: 800;
-      letter-spacing: -1px;
-    }
+footer{border-top:1px solid var(--line);padding:30px 0;font-size:14px}
+.foot{display:grid;gap:18px}
+.foot ul{list-style:none;display:flex;flex-wrap:wrap;gap:8px 20px}
+.foot a{text-decoration:none;font-weight:600}
+.foot a:hover{color:var(--green)}
+.note{color:var(--muted);font-size:13px}
 
-    .logo span {
-      color: #54765b;
-    }
+#toTop{position:fixed;right:16px;bottom:16px;width:44px;height:44px;border-radius:50%;border:0;background:var(--green);color:#fff;font-size:20px;cursor:pointer;opacity:0;visibility:hidden;transition:opacity .2s}
+#toTop.show{opacity:1;visibility:visible}
 
-    nav {
-      display: flex;
-      gap: 18px;
-      flex-wrap: wrap;
-      font-size: 14px;
-    }
-
-    .hero {
-      padding: 65px 0;
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 35px;
-      align-items: center;
-    }
-
-    .eyebrow {
-      color: #54765b;
-      font-size: 12px;
-      font-weight: bold;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-
-    h1 {
-      font-size: clamp(38px, 6vw, 64px);
-      line-height: 1.08;
-      letter-spacing: -2px;
-      margin: 18px 0;
-    }
-
-    .hero p {
-      color: #626860;
-      max-width: 490px;
-      margin-bottom: 25px;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 13px 20px;
-      background: #294d36;
-      color: white;
-      border-radius: 7px;
-      font-weight: bold;
-    }
-
-    .hero-art {
-      min-height: 290px;
-      padding: 25px;
-      border-radius: 24px;
-      background: #e5e8d8;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      font-size: 76px;
-    }
-
-    .hero-art div {
-      max-width: 280px;
-    }
-
-    .hero-art p {
-      font-size: 15px;
-      margin: 12px auto 0;
-    }
-
-    section {
-      padding: 45px 0;
-    }
-
-    .section-heading {
-      margin-bottom: 25px;
-    }
-
-    h2 {
-      font-size: clamp(26px, 4vw, 36px);
-      letter-spacing: -1px;
-      margin-bottom: 8px;
-    }
-
-    .muted {
-      color: #687067;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .card {
-      background: #fff;
-      border: 1px solid #e8e5dc;
-      border-radius: 15px;
-      padding: 23px;
-    }
-
-    .icon {
-      min-height: 100pmin-heightsplay: grid;
-      place-items: center;
-      background: #f1efe6;
-      border-radius: 10px;
-      font-size: 48px;
-      margin-bottom: 18px;
-    }
-
-    .card h3 {
-      margin-bottom: 8px;
-      font-size: 19px;
-    }
-
-    .card p {
-      font-size: 14px;
-      color: #687067;
-    }
-
-    .ideas {
-      background: #e9eddf;
-      border-radius: 20px;
-      padding: 30px;
-    }
-
-    .ideas ol {
-      padding-left: 21px;
-      margin-top: 15px;
-    }
-
-    .ideas li {
-      padding: 6px 0;
-    }
-
-    footer {
-      margin-top: 35px;
-      padding: 28px 0;
-      border-top: 1px solid #e4e0d6;
-      color: #6870min-heightont-size: 13px;
-    }
-
-    @media (max-width: 650px) {
-      .hero {
-        grid-template-columns: 1fr;
-        padding: 42px 0;
-      }
-
-      .hero-art {
-       Toin-height: 210px;
-      }
-
-      .grid {
-        grid-template-columns: 1fr;
-      }
-
-      nav {
-        gap: 12px;
-      }
-    }
-  </style>
+@media(min-width:760px){
+ .menu-btn{display:none}
+ nav{display:flex!important;flex-direction:row;width:auto;gap:26px;padding:0}
+ nav a{border:0;padding:4px 0}
+ nav a.active{text-decoration:underline;text-underline-offset:7px}
+ .problems{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;border-top:0}
+ .problem{grid-template-columns:1fr;border-bottom:0;border-top:3px solid var(--green);padding:18px 0 0}
+ .cats{grid-template-columns:repeat(2,1fr)}
+ .rules{grid-template-columns:repeat(3,1fr);gap:30px}
+ .rule{border-top:3px solid #b9d1bd;padding-top:16px}
+ .help-grid{grid-template-columns:1fr 1fr;gap:50px}
+ .foot{grid-template-columns:1.2fr 1fr}
+}
+@media(min-width:980px){
+ .hero{grid-template-columns:1.1fr 1fr;padding:70px 0 70px;gap:56px}
+ .cats{grid-template-columns:repeat(4,1fr)}
+ .ideas-grid{grid-template-columns:1fr 1.25fr;gap:60px}
+ .ideas-grid .intro{position:sticky;top:96px;align-self:start}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.cat{transition:none}.cat:hover{transform:none}}
+</style>
 </head>
+<body id="top">
 
-<body>
-  <header>
-    <div class="container nav">
-      <a class="logo" href="#">Study<span>Nest.</span></a>
+<header>
+ <div class="wrap nav">
+  <a class="logo" href="index.html">Study<span>Nest.</span></a>
+  <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mainNav">Menu</button>
+  <nav id="mainNav" aria-label="Main navigation">
+   <a href="index.html">Home</a>
+   <a href="desk-organizers.html">Organize Your Desk</a>
+   <a href="#workspace-ideas">Workspace Ideas</a>
+   <a href="#about">About StudyNest</a>
+  </nav>
+ </div>
+</header>
 
-      <nav aria-label="Main navigation">
-        <a href="#categories">Categories</a>
-        <a href="#ideas">Study Tips</a>
-        <a href="#about">About</a>
-      </nav>
-    </div>
-  </header>
+<main>
 
-  <main>
-    <div class="container hero">
-      <div>
-        <span class="eyebrow">A better space to learn</span>
+ <!-- HERO -->
+ <div class="wrap hero">
+  <div>
+   <p class="kicker">Small space. Smarter setup.</p>
+   <h1>Make room for what matters.</h1>
+   <p class="lead">Your desk should help you focus, not make you search for your everyday essentials. StudyNest brings together practical desk organization ideas, compact storage guidance and helpful tips for creating a workspace that works for you, without buying more than you need.</p>
+   <div class="cta-row">
+    <a class="btn btn-main" href="desk-organizers.html">Explore Desk Organizers</a>
+    <a class="btn btn-alt" href="#workspace-ideas">Discover Workspace Ideas</a>
+   </div>
+  </div>
 
-        <h1>Make room for better study.</h1>
+  <!-- To use a photo, replace the <svg> with:
+       <img src="images/desk.jpg" alt="Small study desk with books and a pen holder" width="800" height="600"> -->
+  <figure>
+   <svg viewBox="0 0 480 360" role="img" aria-label="Illustration of a small, tidy study desk with books, a pen holder, a plant and a lamp">
+    <rect width="480" height="360" fill="#e9eee5"/>
+    <rect x="300" y="40" width="110" height="70" fill="#fffefa" stroke="#54765b" stroke-width="3"/>
+    <path d="M312 98l22-26 18 16 24-32 20 42" stroke="#54765b" stroke-width="3" fill="none"/>
+    <rect x="30" y="250" width="420" height="16" rx="3" fill="#54765b"/>
+    <rect x="52" y="266" width="12" height="74" fill="#294d36"/>
+    <rect x="416" y="266" width="12" height="74" fill="#294d36"/>
+    <path d="M110 250V150l44-44" stroke="#294d36" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M136 92l46 8-12 26-42-10z" fill="#d9b44a"/>
+    <rect x="90" y="242" width="40" height="8" rx="3" fill="#294d36"/>
+    <rect x="190" y="214" width="110" height="36" rx="3" fill="#fffefa" stroke="#294d36" stroke-width="2.5"/>
+    <rect x="198" y="194" width="96" height="20" fill="#c8d5c2" stroke="#294d36" stroke-width="2.5"/>
+    <rect x="204" y="176" width="86" height="18" fill="#efe8d8" stroke="#294d36" stroke-width="2.5"/>
+    <rect x="330" y="206" width="64" height="44" rx="4" fill="#fffefa" stroke="#294d36" stroke-width="3"/>
+    <line x1="352" y1="206" x2="352" y2="250" stroke="#294d36" stroke-width="3"/>
+    <path d="M340 206l-6-40M352 206l2-48M368 206l10-40M382 206l12-30" stroke="#54765b" stroke-width="5" stroke-linecap="round"/>
+    <rect x="142" y="226" width="30" height="24" fill="#b8956a"/>
+    <path d="M157 226c-16-20-14-36-4-48M157 226c8-18 20-26 24-28" stroke="#54765b" stroke-width="4" fill="none" stroke-linecap="round"/>
+   </svg>
+   <figcaption>Illustration. You can replace it with your own desk photo.</figcaption>
+  </figure>
+ </div>
 
-        <p>
-          Small desk? Limited budget? Explore practical ideas
-          to We'll add product recommendationsorganize your study space and make every corner count.
-        </p>
+ <!-- PROBLEMS -->
+ <section id="problems" aria-labelledby="problems-h">
+  <div class="wrap">
+   <p class="kicker">Start with your everyday desk problems</p>
+   <h2 id="problems-h">A better workspace starts with small changes.</h2>
+   <p class="lead">A messy desk does not always need a complete makeover. Sometimes, a few thoughtful changes can make everyday work easier.</p>
+   <div class="problems">
+    <article class="problem">
+     <svg viewBox="0 0 54 54" fill="none" stroke="#54765b" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M14 40L10 12M24 42V10M34 40l6-26M44 38l-2-16"/><circle cx="14" cy="44" r="3"/></svg>
+     <div>
+      <h3>Too many small essentials</h3>
+      <p>Pens, pencils, sticky notes and charging cables can quickly spread across a desk. Give frequently used items a consistent place so you can find them when you need them.</p>
+     </div>
+    </article>
+    <article class="problem">
+     <svg viewBox="0 0 54 54" fill="none" stroke="#54765b" stroke-width="3" stroke-linecap="round" aria-hidden="true"><rect x="8" y="16" width="38" height="24" rx="2"/><path d="M8 28h38M27 16v24"/></svg>
+     <div>
+      <h3>Not enough space</h3>
+      <p>A small desk needs thoughtful storage. Before adding accessories, decide which items should stay within reach and which can be stored elsewhere.</p>
+     </div>
+    </article>
+    <article class="problem">
+     <svg viewBox="0 0 54 54" fill="none" stroke="#54765b" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M12 14h30M12 27h30M12 40h18"/><path d="M38 38l4 4 8-9"/></svg>
+     <div>
+      <h3>Hard to stay organized</h3>
+      <p>An organization system should fit your daily routine. The best setup is one you can maintain without repeatedly rearranging everything.</p>
+     </div>
+    </article>
+   </div>
+  </div>
+ </section>
 
-        <a class="button" href="#categories">
-          Explore Study Essentials →
-        </a>
-      </div>
+ <!-- CATEGORIES -->
+ <section id="categories" aria-labelledby="cat-h" style="padding-top:10px">
+  <div class="wrap">
+   <p class="kicker">Explore desk organization</p>
+   <h2 id="cat-h">Find a solution for your workspace.</h2>
+   <p class="lead">Different desks have different needs. Start with what you want to organize, then compare the storage options that make sense for your space.</p>
 
-      <div class="hero-art" aria-label="Study desk illustration">
-        <div>
-          📚 ✏️
-          <p>Less clutter. More focus.</p>
-        </div>
-      </div>
-    </div>
+   <div class="cats">
+    <a class="cat" href="desk-organizers.html">
+     <div class="art a1"><svg viewBox="0 0 84 84" fill="none" stroke="#294d36" stroke-width="3.5" stroke-linecap="round" aria-hidden="true"><rect x="18" y="40" width="48" height="30" rx="3" fill="#fffefa"/><path d="M42 40V70M28 40L24 14M42 40V10M56 40l6-26"/></svg></div>
+     <div class="body">
+      <h3>Desk Organizers</h3>
+      <p>Keep pens, stationery and other small essentials together. Learn what to compare before choosing an organizer.</p>
+      <span class="go">Explore Desk Organizers →</span>
+     </div>
+    </a>
 
-    <section id="categories">
-      <div class="container">
-        <div class="section-heading">
-          <span class="eyebrow">Explore</span>
-          <h2>Organize your way</h2>
-          <p class="muted">
-            Useful ideas for different study-space needs.
-          </p>
-        </div>
+    <a class="cat" href="desk-organizers.html#types">
+     <div class="art a2"><svg viewBox="0 0 84 84" fill="none" stroke="#294d36" stroke-width="3.5" stroke-linecap="round" aria-hidden="true"><rect x="14" y="16" width="14" height="54" fill="#fffefa"/><rect x="31" y="22" width="14" height="48" fill="#c8d5c2"/><rect x="48" y="14" width="14" height="56" fill="#fffefa"/><path d="M66 70l8-44"/></svg></div>
+     <div class="body">
+      <h3>Books and Notebooks</h3>
+      <p>Explore practical ways to keep books, notebooks and folders organized and easy to reach.</p>
+      <span class="go">See book and file organizers →</span>
+     </div>
+    </a>
 
-        <div class="grid">
-          <article class="card">
-            <div class="icon" aria-hidden="true">🖊️</div>
-          <h3>Desk Organizers</h3>
-            <p>
-              Explore ways to keep pens, stationery and small
-              essentials together.
-            </p>
-            <a href="desk-organizers.html">
-  Explore Desk Organizers →
-            </a>
-          </article>
+    <a class="cat" href="desk-organizers.html#checklist">
+     <div class="art a3"><svg viewBox="0 0 84 84" fill="none" stroke="#294d36" stroke-width="3.5" stroke-linecap="round" aria-hidden="true"><rect x="12" y="18" width="60" height="48" rx="3" fill="#fffefa"/><path d="M12 42h60M42 18v48"/><path d="M20 28h14M50 52h14"/></svg></div>
+     <div class="body">
+      <h3>Compact Storage</h3>
+      <p>Learn how to think about available desk space, storage capacity and the items you actually need to store.</p>
+      <span class="go">Check your space →</span>
+     </div>
+    </a>
 
-          <article class="card">
-            <div class="icon" aria-hidden="true">🗂️</div>
-            <h3>Compact Storage</h3>
-            <p>
-              Find practical storage ideas for desks with
-              limited space.
-            </p>
-          </article>
+    <a class="cat" href="desk-organizers.html#types">
+     <div class="art a4"><svg viewBox="0 0 84 84" fill="none" stroke="#294d36" stroke-width="3.5" stroke-linecap="round" aria-hidden="true"><rect x="28" y="12" width="28" height="46" rx="4" fill="#fffefa"/><path d="M20 70h44M42 58v12"/><circle cx="42" cy="50" r="2"/></svg></div>
+     <div class="body">
+      <h3>Phone and Book Stands</h3>
+      <p>Consider how phone stands and book stands might fit into your reading or working routine. Suitability depends on your setup and intended use.</p>
+      <span class="go">Read what to compare →</span>
+     </div>
+    </a>
+   </div>
+  </div>
+ </section>
 
-          <article class="card">
-            <div class="icon" aria-hidden="true">📱</div>
-            <h3>Phone & Book Stands</h3>
-            <p>
-              Discover what to compare before choosing a stand
-              for your study setup.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
+ <!-- WORKSPACE IDEAS -->
+ <section class="ideas-sec" id="workspace-ideas" aria-labelledby="ideas-h">
+  <div class="wrap ideas-grid">
+   <div class="intro">
+    <p class="kicker">Practical workspace ideas</p>
+    <h2 id="ideas-h">Make your desk work better for you.</h2>
+    <p>An organized workspace is not about having the most accessories. It is about making the things you use easier to find and leaving enough room for the work itself.</p>
+    <a class="btn btn-main" href="desk-organizers.html">Explore Desk Organizers →</a>
+   </div>
+   <ol class="tips">
+    <li><h3>Keep daily essentials within reach</h3><p>Place frequently used pens, notebooks and other essentials where you can access them comfortably. Store rarely used items somewhere else.</p></li>
+    <li><h3>Use vertical space thoughtfully</h3><p>Shelves or vertical storage may help free up the main work surface. Consider installation safety, accessibility and the space available.</p></li>
+    <li><h3>Measure before buying storage</h3><p>Check the usable width and depth of your desk. Compare actual product dimensions rather than relying only on photographs.</p></li>
+    <li><h3>Make room for comfortable work</h3><p>Keep enough space for reading, writing and using your devices. Add decorative touches, such as a small motivational poster, only if they do not interfere with your work.</p></li>
+   </ol>
+  </div>
+ </section>
 
-    <section id="ideas">
-      <div class="container">
-        <div class="ideas">
-          <span class="eyebrow">Start simple</span>
-          <h2>A smarter study desk starts here.</h2>
+ <!-- BUY THOUGHTFULLY -->
+ <section class="buy" id="buy" aria-labelledby="buy-h">
+  <div class="wrap">
+   <p class="kicker">Buy thoughtfully, not impulsively</p>
+   <h2 id="buy-h">Choose what solves your problem.</h2>
+   <p class="lead">A product can look attractive in a photograph and still be unsuitable for your desk. Before spending money, check the measurements, material, compartment layout and relevant customer reviews. Think about your budget and the items you actually need to store.</p>
+   <div class="rules">
+    <div class="rule"><strong>Measure the space.</strong><span>Confirm that the product fits your desk.</span></div>
+    <div class="rule"><strong>Check the details.</strong><span>Read the specifications and examine relevant reviews.</span></div>
+    <div class="rule"><strong>Focus on usefulness.</strong><span>More compartments or a bigger discount do not automatically make a product a better choice.</span></div>
+   </div>
+   <a class="btn btn-light" href="desk-organizers.html#checklist">Read the Buying Guide →</a>
+  </div>
+ </section>
 
-          <p class="muted">
-            You do not need to buy everything to get organized.
-          </p>
+ <!-- ABOUT -->
+ <section class="help" id="about" aria-labelledby="about-h">
+  <div class="wrap help-grid">
+   <div>
+    <p class="kicker">How StudyNest helps</p>
+    <h2 id="about-h">Useful guidance for real workspaces.</h2>
+    <p>StudyNest is an independent learning project exploring practical ways to organize study and workspaces. Our focus is on everyday problems, clear explanations and thoughtful product research, not simply recommending more things to buy.</p>
+   </div>
+   <ul>
+    <li>Practical advice over unnecessary purchases.</li>
+    <li>Product comparisons based on available information.</li>
+    <li>Clear guidance that helps visitors make informed decisions.</li>
+   </ul>
+  </div>
+ </section>
 
-          <ol>
-            <li>Keep only your daily essentials within reach.</li>
-            <li>Use vertical space for books when practical.</li>
-            <li>Measure your desk before choosing storage products.</li>
-          </ol>
-        </div>
-      </div>
-    </section>
+ <!-- CLOSING -->
+ <section class="closing" aria-labelledby="close-h">
+  <div class="wrap">
+   <h2 id="close-h">Start with the desk you already have.</h2>
+   <p>You do not need a perfect setup to get organized. Begin with the items you use every day, make better use of the space available and choose storage only when it solves a real problem.</p>
+   <a class="btn btn-main" href="desk-organizers.html">Explore Desk Organizers →</a>
+  </div>
+ </section>
 
-    <section id="about">
-      <div class="container">
-        <span class="eyebrow">Our purpose</span>
-        <h2>Good ideas for real student spaces.</h2>
+</main>
 
-        <p class="muted">
-          StudyNest is a student-focused project exploring
-          affordable study-space organization. Product research
-          and detailed buying guides are coming next.
-        </p>
-      </div>
-    </section>
-  </main>
+<footer>
+ <div class="wrap foot">
+  <div>
+   <p><strong>StudyNest.</strong> Practical ideas for better-organized workspaces.</p>
+   <p class="note">An independent learning project. Product details should be verified with the relevant seller before purchasing.</p>
+   <p class="note">© 2026 StudyNest</p>
+  </div>
+  <nav aria-label="Footer" style="display:block;padding:0">
+   <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="desk-organizers.html">Desk Organizers</a></li>
+    <li><a href="#workspace-ideas">Workspace Ideas</a></li>
+    <li><a href="#about">About StudyNest</a></li>
+   </ul>
+  </nav>
+ </div>
+</footer>
 
-  <footer>
-    <div class="container">
-      <strong>StudyNest.</strong>
-      <p>
-        An independent learning project.
-        Product recommendations will be added after research.
-      </p>
-      <p>© 2026 StudyNest</p>
-    </div>
-  </footer>
+<button id="toTop" aria-label="Back to top">↑</button>
+
+<script>
+(function () {
+  // Mobile menu
+  var btn = document.getElementById('menuBtn');
+  var nav = document.getElementById('mainNav');
+  btn.addEventListener('click', function () {
+    var open = nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open);
+    btn.textContent = open ? 'Close' : 'Menu';
+  });
+  nav.addEventListener('click', function (e) {
+    if (e.target.tagName === 'A') {
+      nav.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+      btn.textContent = 'Menu';
+    }
+  });
+
+  // Highlight current section in the menu
+  var links = nav.querySelectorAll('a[href^="#"]');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) {
+          links.forEach(function (l) {
+            l.classList.toggle('active', l.getAttribute('href') === '#' + en.target.id);
+          });
+        }
+      });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+    links.forEach(function (l) {
+      var s = document.querySelector(l.getAttribute('href'));
+      if (s) io.observe(s);
+    });
+  }
+
+  // Back to top
+  var top = document.getElementById('toTop');
+  window.addEventListener('scroll', function () {
+    top.classList.toggle('show', window.scrollY > 700);
+  }, { passive: true });
+  top.addEventListener('click', function () { window.scrollTo({ top: 0 }); });
+})();
+</script>
 </body>
-  </html>
+</html>
