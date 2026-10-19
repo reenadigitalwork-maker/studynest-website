@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://reenadigitalwork-maker.github.io/studynest-website/sitemap.xml
